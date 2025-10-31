@@ -161,6 +161,44 @@
       box-shadow: 0 0 40px rgba(0, 204, 255, 0.6);
     }
 
+        #contact {
+      text-align: center;
+    }
+    
+    .contact-text {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #ddd;
+    }
+    
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .contact-btn {
+      display: inline-block;
+      padding: 0.9rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(90deg, #0071e3, #00ccff);
+      box-shadow: 0 0 15px rgba(0, 204, 255, 0.4);
+      transition: all 0.3s ease;
+    }
+    
+    .contact-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0, 204, 255, 0.8);
+    }
+    
+    .contact-btn.secondary {
+      background: linear-gradient(90deg, #00ccff, #00ffaa);
+    }
+
 
     footer {
       text-align: center;
@@ -355,10 +393,11 @@
 
   <section id="contact" class="fade-up">
     <h3 class="section-title">Contact</h3>
-    <div class="content-section">
-      <p>Let’s connect and build the future together.</p>
-      <p>Email: <a href="mailto:om.patel1990@icloud.com">om.patel1990@icloud.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/ompatel25" target="_blank">linkedin.com/in/ompatel25</a></p>
+    <p class="contact-text">Let’s connect and build the future together.</p>
+  
+    <div class="contact-buttons">
+      <a href="mailto:om.patel1990@icloud.com" class="contact-btn">📧 Email Me</a>
+      <a href="https://linkedin.com/in/ompatel25" target="_blank" class="contact-btn secondary">🔗 LinkedIn</a>
     </div>
   </section>
 
@@ -379,6 +418,7 @@
   </script>
 </body>
 </html>
+
 
 
 
