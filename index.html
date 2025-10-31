@@ -129,11 +129,22 @@
 
     .project-card h4 a { color: #00ccff; text-decoration: none; }
     .project-card h4 a:hover { text-decoration: underline; }
-
+    
+    #resume {
+      text-align: center;
+    }
+    
+    .resume-text {
+      font-size: 1.1rem;
+      color: #ddd;
+      margin-bottom: 1.5rem;
+    }
+    
     .resume-preview {
       display: flex;
       justify-content: center;
-      margin: 2rem 0;
+      align-items: center;
+      margin: 0 auto 2rem auto;
     }
     
     .resume-preview img {
@@ -149,6 +160,7 @@
       transform: scale(1.03);
       box-shadow: 0 0 40px rgba(0, 204, 255, 0.6);
     }
+
 
     footer {
       text-align: center;
@@ -218,16 +230,18 @@
     </div>
   </section>
 
-<section id="resume" class="fade-up">
-  <h3 class="section-title">Resume</h3>
-  <div class="resume-preview">
-    <a href="ECE_1100_LinkedIn_Patel.pdf" target="_blank">
-      <img src="images/resume_preview.png" alt="Om Patel Resume Preview">
-    </a>
-  </div>
-  <p>Click the preview above to view or download my comprehensive one-page résumé.</p>
-</section>
-
+  <section id="resume" class="fade-up">
+    <h3 class="section-title">Resume</h3>
+    <p class="resume-text">
+      Click below to view or download my comprehensive one-page résumé.
+    </p>
+    <div class="resume-preview">
+      <a href="ECE_1100_LinkedIn_Patel.pdf" target="_blank">
+        <img src="images/resume_preview.png" alt="Om Patel Resume Preview">
+      </a>
+    </div>
+  </section>
+  
   <section id="career" class="fade-up">
     <h3 class="section-title">Career Goals</h3>
     <div class="content-section">
@@ -365,6 +379,7 @@
   </script>
 </body>
 </html>
+
 
 
 
