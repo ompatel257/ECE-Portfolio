@@ -217,9 +217,70 @@
       width: 100%; height: 100%;
       z-index: -2;
     }
+
+    /* ===== NEW STYLES FOR CERTIFICATIONS SECTION ===== */
+    .cert-list {
+      list-style: none;
+      padding: 0;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .cert-list li {
+      background: rgba(26, 26, 26, 0.8);
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(0, 204, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+    
+    .cert-list li:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 15px rgba(0,113,227,0.3);
+      border-color: rgba(0, 204, 255, 0.6);
+    }
+
+    /* Style for non-clickable achievement items */
+    .cert-list li.achievement-item {
+      padding: 1.5rem 2rem;
+    }
+
+    /* Style for clickable certification items */
+    .cert-list li.cert-item a {
+      display: block;
+      padding: 1.5rem 2rem;
+      text-decoration: none;
+      color: #f5f5f5;
+    }
+
+    .cert-list h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #00ccff; /* Accent color for the title */
+      margin-bottom: 0.25rem;
+    }
+
+    .cert-list span {
+      font-size: 0.9rem;
+      color: #ccc;
+      font-style: italic;
+    }
+    
+    /* Add a small icon to show it's a link */
+    .cert-list li.cert-item a::after {
+      content: '🔗'; /* You can change this to 'PDF' or another icon */
+      float: right;
+      font-size: 1.2rem;
+      opacity: 0.5;
+      transition: opacity 0.3s ease;
+    }
+    
+    .cert-list li.cert-item a:hover::after {
+      opacity: 1;
+    }
   </style>
 
-  <!-- ===== Particle.js Library ===== -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -259,7 +320,6 @@
     <h2>Welcome to My Portfolio</h2>
     <p>“In the long run, we shape our lives, and we shape ourselves. The process never ends until we die. And the choices we make are ultimately our own responsibility.” — Eleanor Roosevelt</p>
   
-    <!-- Photo in rectangular box with rounded corners -->
     <div style="width: 100%; max-width: 400px; margin: 20px auto;">
       <img src="images/om_patel.JPG" alt="Om Patel" style="width: 100%; border-radius: 15px;">
     </div>
@@ -274,7 +334,6 @@
     <div class="content-section">
       <p>I’m Om Patel, an Electrical Engineering student at Georgia Tech with a focus on hardware systems and design. I worked on Comark’s R&D team, where I gained hands-on experience with Verilog, SystemVerilog, and CAD tools while contributing to product development. On campus, I’ve been involved with the Energy Club and Silicon Jackets, where I’ve worked on projects that challenged my technical and teamwork skills. I’m interested in hardware engineering and robotics and enjoy building things that work reliably and make a real impact. Throughout high school, I built on these passions by leading my robotics team to top 10 finishes two years in a row and starting and serving as president of the drone team.</p>
   
-      <!-- 3 images in a row with rounded corners -->
       <div style="display: flex; justify-content: center; gap: 20px; margin-top: 30px;">
         <img src="images/graduation.jpg" alt="Graduation Photo" style="max-height: 400px; width: auto; border-radius: 15px;">
         <img src="images/atlanta.jpg" alt="Atlanta Photo" style="max-height: 400px; width: auto; border-radius: 15px;">
@@ -390,14 +449,47 @@
   <section id="certifications" class="fade-up">
     <h3 class="section-title">Certifications & Achievements</h3>
     <div class="content-section">
-      <p>• SkillsUSA National Top 10 (x2) – Mobile Robotics</p>
-      <p>• BVT Varsity Math Team Champion (x2)</p>
-      <p>• OSHA 10-Hour Certified</p>
-      <p>• Six Sigma White Belt Certified</p>
-      <p>• Autodesk Inventor & Revit Certified</p>
+      <ul class="cert-list">
+        <li class="achievement-item">
+          <h4>SkillsUSA National Top 10 (x2) – Mobile Robotics</h4>
+        </li>
+        <li class="achievement-item">
+          <h4>BVT Varsity Math Team Champion (x2)</h4>
+        </li>
+        
+        <li class="cert-item">
+          <a href="[LINK_TO_REVIT_PDF]" target="_blank">
+            <h4>Autodesk Revit Certified Associate</h4>
+            <span>Issued: 05/21/2024</span>
+          </a>
+        </li>
+        <li class="cert-item">
+          <a href="[LINK_TO_INVENTOR_PDF]" target="_blank">
+            <h4>Autodesk Inventor Certified Associate</h4>
+            <span>Issued: 05/17/2022</span>
+          </a>
+        </li>
+        <li class="cert-item">
+          <a href="[LINK_TO_OSHA_PDF]" target="_blank">
+            <h4>OSHA General Industry - 10 Hrs (OSHA G10)</h4>
+            <span>Issued: 05/20/2022</span>
+          </a>
+        </li>
+        <li class="cert-item">
+          <a href="[LINK_TO_FAA_PDF]" target="_blank">
+            <h4>FAA TRUST</h4>
+            <span>Issued: 05/17/2022</span>
+          </a>
+        </li>
+        <li class="cert-item">
+          <a href="[LINK_TO_SSWB_PDF]" target="_blank">
+            <h4>Six Sigma White Belt</h4>
+            <span>Issued: 04/26/2022</span>
+          </a>
+        </li>
+      </ul>
     </div>
   </section>
-
   <section id="skills" class="fade-up">
     <h3 class="section-title">Skills</h3>
     <div class="content-section">
@@ -435,24 +527,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
